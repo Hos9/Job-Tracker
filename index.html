@@ -51,7 +51,7 @@
       </h1>
       <div
         id="job-count-container"
-        class="grid grid-cols-1 gap-3 sm:grid-cols-3"
+        class="grid grid-cols-1 gap-3 md:grid-cols-3"
       >
         <div class="count-total bg-base-300 p-5 rounded-md shadow-md">
           <p class="text-netrual text-lg pb-2">Total</p>
@@ -70,32 +70,25 @@
 
     <div class="border-b-2 border-gray-300 py-5 mb-5"></div>
 
-    <section id="available-jobs">
-      <div class="jobs-container">
-        <div class="jobs-head flex justify-between pb-6">
-          <h1 class="font-bold text-xl">Available Jobs</h1>
-          <p>8 Jobs</p>
-        </div>
-        <div class="buttons flex gap-2 mb-4">
-          <button onclick="showOnly('')" id="all" class="btn btn-soft w-20">
-            All
-          </button>
-          <button
-            onclick="showOnly('')"
-            id="interview"
-            class="btn btn-soft w-20"
-          >
-            Interview
-          </button>
-          <button
-            onclick="showOnly('')"
-            id="rejected"
-            class="btn btn-soft w-20"
-          >
-            Rejected
-          </button>
-        </div>
+    <div class="jobs-heading">
+      <div class="jobs-head flex justify-between pb-6">
+        <h1 class="font-bold text-xl">Available Jobs</h1>
+        <p>8 Jobs</p>
       </div>
+      <div class="buttons flex gap-2 mb-4">
+        <button onclick="showOnly('all-jobs')" class="btn btn-soft w-20">
+          All
+        </button>
+        <button onclick="showOnly('interview')" class="btn btn-soft w-20">
+          Interview
+        </button>
+        <button onclick="showOnly('rejected')" class="btn btn-soft w-20">
+          Rejected
+        </button>
+      </div>
+    </div>
+
+    <section id="all-jobs">
       <div class="jobs-cards-container">
         <div
           id="job-card-1"
@@ -118,7 +111,7 @@
               on products used by millions of users worldwide.
             </p>
           </div>
-          <div class="card felx sm:flex-row gap-5">
+          <div class="card felx md:flex-row gap-5">
             <div>
               <button
                 class="btn w-30 bg-transparent border-green-600 text-green-600"
@@ -157,7 +150,7 @@
               on products used by millions of users worldwide.
             </p>
           </div>
-          <div class="card felx sm:flex-row gap-5">
+          <div class="card felx flex-row gap-5">
             <div>
               <button
                 class="btn w-30 bg-transparent border-green-600 text-green-600"
@@ -196,7 +189,7 @@
               on products used by millions of users worldwide.
             </p>
           </div>
-          <div class="card felx sm:flex-row gap-5">
+          <div class="card felx flex-row gap-5">
             <div>
               <button
                 class="btn w-30 bg-transparent border-green-600 text-green-600"
@@ -235,7 +228,7 @@
               on products used by millions of users worldwide.
             </p>
           </div>
-          <div class="card felx sm:flex-row gap-5">
+          <div class="card felx flex-row gap-5">
             <div>
               <button
                 class="btn w-30 bg-transparent border-green-600 text-green-600"
@@ -274,7 +267,7 @@
               on products used by millions of users worldwide.
             </p>
           </div>
-          <div class="card felx sm:flex-row gap-5">
+          <div class="card felx flex-row gap-5">
             <div>
               <button
                 class="btn w-30 bg-transparent border-green-600 text-green-600"
@@ -313,7 +306,7 @@
               on products used by millions of users worldwide.
             </p>
           </div>
-          <div class="card felx sm:flex-row gap-5">
+          <div class="card felx flex-row gap-5">
             <div>
               <button
                 class="btn w-30 bg-transparent border-green-600 text-green-600"
@@ -352,7 +345,7 @@
               on products used by millions of users worldwide.
             </p>
           </div>
-          <div class="card felx sm:flex-row gap-5">
+          <div class="card felx md:flex-row gap-5">
             <div>
               <button
                 class="btn w-30 bg-transparent border-green-600 text-green-600"
@@ -391,7 +384,7 @@
               on products used by millions of users worldwide.
             </p>
           </div>
-          <div class="card felx sm:flex-row gap-5">
+          <div class="card felx md:flex-row gap-5">
             <div>
               <button
                 class="btn w-30 bg-transparent border-green-600 text-green-600"
@@ -410,5 +403,23 @@
         </div>
       </div>
     </section>
+
+    <section id="interview" class="mx-auto text-center hidden">
+      <div>
+        <img class="mx-auto pt-30 pb-5" src="./images/jobs.png" alt="" />
+        <h1 class="font-bold text-2xl pb-1">No jobs(interview) available</h1>
+        <p class="pb-30">Check back soon for new job opportunities</p>
+      </div>
+    </section>
+
+    <section id="rejected" class="mx-auto text-center hidden">
+      <div>
+        <img class="mx-auto pt-30 pb-5" src="./images/jobs.png" alt="" />
+        <h1 class="font-bold text-2xl pb-1">No jobs(rejected) available</h1>
+        <p class="pb-30">Check back soon for new job opportunities</p>
+      </div>
+    </section>
+
+    <script src="./scripts/machine.js"></script>
   </body>
 </html>
