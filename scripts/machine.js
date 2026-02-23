@@ -1,16 +1,3 @@
-// function showOnly(id) {
-//   const allJobs = document.getElementById("all-jobs");
-//   const interview = document.getElementById("interview");
-//   const rejected = document.getElementById("rejected");
-
-//   allJobs.classList.add("hidden");
-//   interview.classList.add("hidden");
-//   rejected.classList.add("hidden");
-
-//   const selected = document.getElementById(id);
-//   selected.classList.remove("hidden");
-// }
-
 // Delete Button
 document.addEventListener("click", function (e) {
   const isDeleteBtn = e.target.closest('button[data-action="delete-card"]');
@@ -47,15 +34,14 @@ function calculateCount() {
 calculateCount();
 
 // Toggling buttons
+const allJobsBtn = document.getElementById("all-jobs-btn");
+const interviewBtn = document.getElementById("interview-btn");
+const rejectedBtn = document.getElementById("rejected-btn");
+const allJobs = document.getElementById("all-jobs");
+const interview = document.getElementById("interview");
+const rejected = document.getElementById("rejected");
 
 function toggleStyle(id) {
-  const allJobsBtn = document.getElementById("all-jobs-btn");
-  const interviewBtn = document.getElementById("interview-btn");
-  const rejectedBtn = document.getElementById("rejected-btn");
-  const allJobs = document.getElementById("all-jobs");
-  const interview = document.getElementById("interview");
-  const rejected = document.getElementById("rejected");
-
   allJobsBtn.classList.add("bg-gray-300", "text-black");
   interviewBtn.classList.add("bg-gray-300", "text-black");
   rejectedBtn.classList.add("bg-gray-300", "text-black");
