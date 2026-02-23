@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" data-theme="nord">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Tracker | Home</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+
+    <!-- Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Daisy All Theme -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        font-family: "Outfit", sans-serif;
+      }
+    </style>
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="mx-auto w-11/12 max-w-7xl py-5">
+    <div
+      id="job-card-2"
+      class="job-card relative space-y-5 bg-base-200 p-6 shadow-sm rounded-lg mb-4"
+    >
+      <!-- Top-right delete icon button -->
+      <button
+        type="button"
+        class="btn border-gray-300 btn-circle btn-ghost btn-lg absolute right-3 top-3 z-10"
+        aria-label="Delete job card"
+        data-action="delete-card"
+      >
+        <!-- Trash icon (Heroicons solid) -->
+        <i class="fa-solid fa-trash"></i>
+      </button>
+
+      <div class="card">
+        <h1 class="font-bold text-xl">Mobile First Corp</h1>
+        <p>React Native Developer</p>
+      </div>
+
+      <div class="card">
+        <p>Remote • Full-time • $130,000 - $175,000</p>
+      </div>
+
+      <div class="card">
+        <button class="btn btn-soft w-36 mb-2 border-gray-500">
+          Not Applied
+        </button>
+        <p>
+          Build cross-platform mobile applications using React Native. Work on
+          products used by millions of users worldwide.
+        </p>
+      </div>
+
+      <!-- NOTE: fixed typo felx -> flex -->
+      <div class="card flex flex-row gap-5">
+        <div>
+          <button
+            class="btn w-30 bg-transparent border-green-600 text-green-600"
+          >
+            INTERVIEW
+          </button>
+        </div>
+        <div>
+          <button class="btn w-30 bg-transparent border-red-600 text-red-600">
+            REJECTED
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/demo.js"></script>
+  </body>
+</html>
