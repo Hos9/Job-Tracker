@@ -72,6 +72,7 @@
       </div>
     </header>
 
+  <main>
     <!-- Border -->
     <div class="border-b-2 border-gray-300 py-5 mb-5"></div>
 
@@ -104,11 +105,11 @@
           class="job-card relative space-y-5 bg-base-200 p-6 shadow-sm rounded-lg mb-4"
         >
           <div class="card">
-            <h1 class="font-bold text-xl">Mobile First Corp</h1>
-            <p class="">React Native Developer</p>
+            <h1 class="job-title font-bold text-xl">Mobile First Corp</h1>
+            <p class="job-details">React Native Developer</p>
             <button
               type="button"
-              class="btn btn-circle btn-soft btn-error border-gray-300 btn-lg absolute right-3 top-0 z-50"
+              class="dlt-btn btn btn-circle btn-soft btn-error border-gray-300 btn-lg absolute right-3 top-0 z-50"
               aria-label="Delete job card"
               data-action="delete-card"
             >
@@ -116,13 +117,13 @@
             </button>
           </div>
           <div class="card">
-            <p class="">Remote • Full-time • $130,000 - $175,000</p>
+            <p class="salary-range">Remote • Full-time • $130,000 - $175,000</p>
           </div>
           <div class="card">
-            <button class="btn btn-soft w-36 mb-2 border-gray-500">
+            <div class="status btn btn-soft w-36 mb-2 border-gray-500">
               Not Applied
-            </button>
-            <p class="">
+            </div>
+            <p class="to-do">
               Build cross-platform mobile applications using React Native. Work
               on products used by millions of users worldwide.
             </p>
@@ -130,14 +131,14 @@
           <div class="card felx md:flex-row gap-5">
             <div>
               <button id="btn-interview"
-                class="btn btn-soft btn-success w-30  border-green-600 text-green-600"
+                class="btn-interview btn btn-soft btn-success w-30  border-green-600 text-green-600"
               >
                 INTERVIEW
               </button>
             </div>
             <div>
               <button id="btn-rejected"
-                class="btn btn-soft btn-error w-30  border-red-600 text-red-600"
+                class="btn-rejected btn btn-soft btn-error w-30  border-red-600 text-red-600"
               >
                 REJECTED
               </button>
@@ -165,7 +166,9 @@
         <p class="pb-30">Check back soon for new job opportunities</p>
       </div>
     </section>
-
+  </main>
     <script src="./scripts/machine.js"></script>
   </body>
 </html>
+
+
