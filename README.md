@@ -1,83 +1,48 @@
-## Welcome To ( সহজ সরল সিম্পল ) Assignment - 4 
+1. Difference between getElementById, getElementsByClassName, querySelector, querySelectorAll
 
+getElementById:
 
----
-# 📅 Deadline For 60 marks: 23th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 50 marks: 24th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 30 marks: Any time after 24th February.
+- Selects an element using its unique ID.
+- Returns one element.
 
+getElementsByClassName:
 
-# Main Requirements
+- Selects all elements with the same class.
+- Returns an HTMLCollection (updates automatically if DOM changes).
 
-## Design Part
+querySelector:
 
-## Dashboard
-- Website name and Create a dashboard like figma 
-- The section should be responsive for mobile devices. It is totally up to you. 
+- Selects the first matching element using CSS selectors (ID, class, tag).
+- Returns one element.
 
-## Available Jobs Section
-- A title on the left side, jobs count on the right side 
-- 3 different tab  below the section title 
-- Minimum 8 cards with:
-	- companyName
-	- position
-	- location
-	- type
-	- salary
-	- description
-	- 2 buttons: Interview, Rejected
-- By default all the jobs data will show on All tab, and the Interview, Rejected tab will show “No jobs Available” message with a subtitle below and an icon/image on the above
+querySelectorAll:
 
-- The section should be responsive for mobile devices. It is totally up to you.
+- Selects all matching elements using CSS selectors.
+- Returns a NodeList (does not auto-update).
 
---- 
+2. How to Create and Insert a New Element
 
-## Functionalities Part
-- Clicking on Interview button on the card 
-    - will add the data on Interview tab 
-    - add the status as Interview.
-    - Will increase the the count of interview in Dashboard 
+1. Select the parent container.
+1. Create a new element using document.createElement().
+1. Add content using innerHTML or textContent.
+1. Insert it using appendChild().
 
-- Clicking on Rejected button on the card 
-    - will add the data on Rejected tab 
-    - add the status as Rejected.
-    - Will increase the the count of Rejected in Dashboard
+1. What is Event Bubbling?
 
-- Enable toggle between Interview and rejected button(you can select Rejected button after clicking on Interview, and Interview button after clicking on Rejected button). It will change the tab and dashboard count also. It will show tab wise jobs count on the right.
+- When an event occurs on a child element, it moves upward to its parent, then to ancestors.
+- Useful because one parent event listener can manage events for many child elements.
 
----
+4. What is Event Delegation?
 
-# Challenges Requirements
-- Clicking on the delete button will remove that card from the UI, and the count will be deducted from the dashboard card and the main section.
-- No lorem ipsum text on your website. At least 8 meaningful commits in your project.  
+- Adding one event listener to a parent to control events from multiple child elements.
+- Reduces the need for multiple event listeners.
 
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
+5. Difference Between preventDefault() and stopPropagation()
 
+preventDefault():
 
-## Answers to Questions
+- Stops the default action of an element (e.g., link redirect, form submit).
 
-### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+stopPropagation():
 
-### 2. How do you create and insert a new element into the DOM?
-
-### 3. What is Event Bubbling? And how does it work?
-
-### 4. What is Event Delegation in JavaScript? Why is it useful?
-
-### 5. What is the difference between preventDefault() and stopPropagation() methods?
-
----
-
-
-**Technology Stack:**
-- HTML
-- CSS (Vanilla/Tailwind/DaisyUI)
-- JavaScript (Vanilla)
-
-
---- 
-
-## What to submit: 
-
-1. GitHub Repository Link: 
-2. Live Site Link: 
+- Stops the event from bubbling to parent elements.
